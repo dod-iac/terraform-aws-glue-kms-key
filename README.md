@@ -7,7 +7,7 @@ module "glue_kms_key" {
   source = "dod-iac/glue-kms-key/aws"
 
   name = format("alias/app-%s-glue-%s", var.application, var.environment)
-  description = format("A KMS key used to encrypt Glue volumes for %s:%s.", var.application, var.environment)
+  description = format("A KMS key used to encrypt glue volumes for %s:%s.", var.application, var.environment)
   tags = {
     Application = var.application
     Environment = var.environment
@@ -39,6 +39,21 @@ This project constitutes a work of the United States Government and is not subje
 |------|---------|
 | aws | >= 2.55.0 |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_caller_identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) |
+| [aws_iam_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) |
+| [aws_kms_alias](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) |
+| [aws_kms_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) |
+| [aws_partition](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/partition) |
+| [aws_region](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -55,4 +70,3 @@ This project constitutes a work of the United States Government and is not subje
 | aws\_kms\_alias\_arn | The Amazon Resource Name (ARN) of the key alias. |
 | aws\_kms\_alias\_name | The display name of the alias. |
 | aws\_kms\_key\_arn | The Amazon Resource Name (ARN) of the key. |
-

@@ -1,3 +1,4 @@
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Usage
 
 Creates a KMS Key for use with AWS Glue.
@@ -30,14 +31,14 @@ This project constitutes a work of the United States Government and is not subje
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12 |
-| aws | >= 2.55.0 |
+| terraform | >= 0.13 |
+| aws | ~> 3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | >= 2.55.0 |
+| aws | ~> 3.0 |
 
 ## Modules
 
@@ -70,3 +71,4 @@ No Modules.
 | aws\_kms\_alias\_arn | The Amazon Resource Name (ARN) of the key alias. |
 | aws\_kms\_alias\_name | The display name of the alias. |
 | aws\_kms\_key\_arn | The Amazon Resource Name (ARN) of the key. |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
